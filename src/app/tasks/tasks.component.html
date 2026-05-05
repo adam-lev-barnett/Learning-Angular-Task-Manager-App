@@ -1,0 +1,22 @@
+<section id="tasks">
+  <header>
+    <h2>{{ user.name }}'s Tasks</h2>
+    <menu>
+      <button>Add task</button>
+    </menu>
+  </header>
+
+  <ul>
+    @for(task of selectedUserTasks; track task.id) {
+      <li>
+        <!-- Complete is the event emitter from Task. When Task activates its onCompleteTask() when its button is clicked,
+              Task has its 'complete' event emitter use .emit(this.task.id).
+              by setting its attribute (complete) within its block in the parent component (Tasks) to Tasks' onCompleteTask
+              it passes the emission from 'complete' to Tasks' onCompleteTask via $event. That function specifically changes the state of its copy of DummyTasks.
+        -->
+        <app-task [task]="task" (complete)="onCompleteTask($event)"/>
+      </li>
+    }
+  </ul>
+
+</section>

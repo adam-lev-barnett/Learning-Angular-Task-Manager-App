@@ -1,9 +1,9 @@
 
-import {Task, taskFactory} from "./task.model";
+import {Task} from "./task.model";
 
 
 export const DummyTasks: Task[] = [
-  taskFactory('t1', 'u1', 'Master Angular', 'Learn all the basics and stuff', '2025-12-31'),
-  taskFactory('t2', 'u3', 'Eat a poodle', 'Figure out how to eat poodle', '2025-2-31'),
-  taskFactory('t2', 'u3', 'Eat a potato', 'Figure out how to eat potato', '2025-2-31'),
+  {id: 't1', userId: 'u1', title: 'Master Angular', summary: 'Learn all the basics and stuff', dueDate: '2025-12-31'},
+  {id: 't2', userId: 'u3', title: 'Eat a poodle', summary: 'Figure out how to eat poodle', dueDate: '2025-2-31'},
+  {id: 't2', userId: 'u3', title: 'Eat a moose', summary: 'Figure out how to eat a moose', dueDate: '2026-5-31'},
 ]

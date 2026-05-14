@@ -6,17 +6,8 @@ export interface Task {
   dueDate: string
 }
 
-export function taskFactory(
-  id: string,
-  userId: string,
+export interface NewTaskData {
   title: string,
   summary: string,
-  dueDate: string): Task {
-  return {
-    id: id,
-    userId: userId,
-    title: title,
-    summary: summary,
-    dueDate: dueDate,
-  };
+  dueDate: string
 }
